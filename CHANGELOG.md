@@ -5,7 +5,7 @@ follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions
 follow [Semantic Versioning](https://semver.org/). This file is generated at
 each release from the Conventional Commits: do not edit it by hand.
 
-## [0.1.0] - unreleased
+## [0.1.0] - 2026-11-18
 
 ### Added
 
@@ -17,3 +17,5 @@ each release from the Conventional Commits: do not edit it by hand.
 - Dashboard widgets: the nearest stations of a place (filters per widget, details, links to Open Charge Map and to the directions) and one followed station (status, power, points, distance, last check-ins).
 - The data provider and its licence are shown with every station, as the terms of Open Charge Map ask.
 - A "Test the key and the places" button; English, French, German and Spanish everywhere: settings, devices, widgets, scenes and documentation.
+
+[0.1.0]: https://github.com/William-De71/gladys-open-charge-map/releases/tag/v0.1.0
