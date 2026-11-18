@@ -1,0 +1,166 @@
+{
+  "Operators": [
+    {
+      "WebsiteURL": null,
+      "Comments": "For use when the operator of the equipment is a single business owner connected to the location and equipment is not part of a larger network",
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": null,
+      "ID": 45,
+      "Title": "(Business Owner at Location)"
+    },
+    {
+      "WebsiteURL": null,
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": null,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": null,
+      "ID": 1,
+      "Title": "(Unknown Operator)"
+    },
+    {
+      "WebsiteURL": "https://chargy.lu/",
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": false,
+      "ID": 3321,
+      "Title": "Chargy (LU)"
+    },
+    {
+      "WebsiteURL": "http://www.enovos.lu/particuliers/ecomobilite",
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": false,
+      "ID": 52,
+      "Title": "Enovos"
+    },
+    {
+      "WebsiteURL": "http://www.essent.nl/content/particulier/producten/elektrisch_rijden/index.html",
+      "Comments": null,
+      "PhonePrimaryContact": "0800 377 36 83",
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": null,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": "elektrischrijden@essent.nl",
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": null,
+      "ID": 78,
+      "Title": "Essent (NL)"
+    },
+    {
+      "WebsiteURL": "http://www.estonteco.eu/live/",
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": false,
+      "ID": 205,
+      "Title": "Estonteca"
+    },
+    {
+      "WebsiteURL": "https://www.tesla.com/en_AU/support/non-tesla-supercharging",
+      "Comments": "Tesla charging including support for non-tesla vehicles",
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": false,
+      "ID": 3534,
+      "Title": "Tesla (including non-tesla)"
+    },
+    {
+      "WebsiteURL": "http://www.teslamotors.com",
+      "Comments": null,
+      "PhonePrimaryContact": null,
+      "PhoneSecondaryContact": null,
+      "IsPrivateIndividual": false,
+      "AddressInfo": null,
+      "BookingURL": null,
+      "ContactEmail": null,
+      "FaultReportEmail": null,
+      "IsRestrictedEdit": false,
+      "ID": 23,
+      "Title": "Tesla (Tesla-only charging)"
+    }
+  ],
+  "DataProviders": [
+    {
+      "WebsiteURL": "http://openchargemap.org",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 1,
+        "Title": "Manual Data Entry"
+      },
+      "IsRestrictedEdit": false,
+      "IsOpenDataLicensed": true,
+      "IsApprovedImport": true,
+      "License": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "DateLastImported": null,
+      "ID": 1,
+      "Title": "Open Charge Map Contributors"
+    },
+    {
+      "WebsiteURL": "http://www.oplaadpalen.nl/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "IsOpenDataLicensed": true,
+      "IsApprovedImport": true,
+      "License": "Licensed under Attribution-NonCommercial-ShareAlike 3.0 : http://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "DateLastImported": "2016-06-04T03:04:53.05Z",
+      "ID": 26,
+      "Title": "Oplaadpalen.nl"
+    },
+    {
+      "WebsiteURL": "https://www.data.gouv.fr/fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/",
+      "Comments": null,
+      "DataProviderStatusType": {
+        "IsProviderEnabled": true,
+        "ID": 20,
+        "Title": "Automated Import"
+      },
+      "IsRestrictedEdit": false,
+      "IsOpenDataLicensed": true,
+      "IsApprovedImport": true,
+      "License": "Open License: https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf",
+      "DateLastImported": "2022-08-23T10:39:51.413Z",
+      "ID": 28,
+      "Title": "data.gouv.fr"
+    }
+  ]
+}

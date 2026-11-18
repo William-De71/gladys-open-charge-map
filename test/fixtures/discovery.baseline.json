@@ -1,0 +1,433 @@
+{
+  "comment": "Generated from version 0.1.0 (the first release). Never edit to make a test pass: see test/structure.test.js.",
+  "devices": {
+    "zone": {
+      "external_id": "ext:open-charge-map:zone:house-maison",
+      "should_poll": false,
+      "params": ["OCM_LATITUDE", "OCM_LONGITUDE"],
+      "features": [
+        {
+          "external_id": "ext:open-charge-map:zone:house-maison:stations",
+          "category": "counter-sensor",
+          "type": "integer",
+          "min": 0,
+          "max": 250,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:zone:house-maison:fast",
+          "category": "counter-sensor",
+          "type": "integer",
+          "min": 0,
+          "max": 250,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:zone:house-maison:nearest",
+          "category": "distance-sensor",
+          "type": "decimal",
+          "unit": "km",
+          "min": 0,
+          "max": 100,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:zone:house-maison:summary",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": false
+        }
+      ],
+      "options": []
+    },
+    "station": {
+      "external_id": "ext:open-charge-map:station:194234",
+      "should_poll": false,
+      "params": ["OCM_ID", "OCM_URL"],
+      "features": [
+        {
+          "external_id": "ext:open-charge-map:station:194234:status",
+          "category": "charging-station",
+          "type": "connector-status",
+          "min": 0,
+          "max": 4,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:station:194234:points",
+          "category": "counter-sensor",
+          "type": "integer",
+          "min": 0,
+          "max": 999,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:station:194234:details",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": false
+        },
+        {
+          "external_id": "ext:open-charge-map:station:194234:checkin",
+          "category": "text",
+          "type": "text",
+          "min": 0,
+          "max": 0,
+          "read_only": true,
+          "has_feedback": false
+        }
+      ],
+      "options": []
+    }
+  },
+  "manifest": {
+    "config_schema": [
+      {
+        "key": "intro",
+        "type": "section"
+      },
+      {
+        "key": "api_key",
+        "type": "secret"
+      },
+      {
+        "key": "places",
+        "type": "section"
+      },
+      {
+        "key": "house_1",
+        "type": "select"
+      },
+      {
+        "key": "coordinates_1",
+        "type": "string"
+      },
+      {
+        "key": "place_2_section",
+        "type": "section"
+      },
+      {
+        "key": "house_2",
+        "type": "select"
+      },
+      {
+        "key": "coordinates_2",
+        "type": "string"
+      },
+      {
+        "key": "place_3_section",
+        "type": "section"
+      },
+      {
+        "key": "house_3",
+        "type": "select"
+      },
+      {
+        "key": "coordinates_3",
+        "type": "string"
+      },
+      {
+        "key": "search",
+        "type": "section"
+      },
+      {
+        "key": "radius",
+        "type": "select"
+      },
+      {
+        "key": "min_power",
+        "type": "select"
+      },
+      {
+        "key": "connectors",
+        "type": "multi_select"
+      },
+      {
+        "key": "public_only",
+        "type": "boolean"
+      },
+      {
+        "key": "offered",
+        "type": "select"
+      },
+      {
+        "key": "options",
+        "type": "section"
+      },
+      {
+        "key": "interval",
+        "type": "select"
+      },
+      {
+        "key": "language",
+        "type": "select"
+      }
+    ],
+    "scene_triggers": [
+      {
+        "key": "new_station",
+        "fields": [
+          {
+            "key": "device",
+            "options": []
+          },
+          {
+            "key": "fast",
+            "options": ["yes", "no"]
+          }
+        ],
+        "variables": [
+          {
+            "key": "device_name",
+            "type": "string"
+          },
+          {
+            "key": "station_id",
+            "type": "number"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "address",
+            "type": "string"
+          },
+          {
+            "key": "distance_km",
+            "type": "number"
+          },
+          {
+            "key": "max_power_kw",
+            "type": "number"
+          },
+          {
+            "key": "fast",
+            "type": "string"
+          },
+          {
+            "key": "connectors",
+            "type": "string"
+          },
+          {
+            "key": "operator",
+            "type": "string"
+          },
+          {
+            "key": "status",
+            "type": "string"
+          },
+          {
+            "key": "latitude",
+            "type": "number"
+          },
+          {
+            "key": "longitude",
+            "type": "number"
+          },
+          {
+            "key": "url",
+            "type": "string"
+          },
+          {
+            "key": "summary",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "key": "station_status_changed",
+        "fields": [
+          {
+            "key": "device",
+            "options": []
+          },
+          {
+            "key": "change",
+            "options": ["unavailable", "available", "other"]
+          }
+        ],
+        "variables": [
+          {
+            "key": "device_name",
+            "type": "string"
+          },
+          {
+            "key": "station_id",
+            "type": "number"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "status",
+            "type": "string"
+          },
+          {
+            "key": "previous_status",
+            "type": "string"
+          },
+          {
+            "key": "change",
+            "type": "string"
+          },
+          {
+            "key": "operational",
+            "type": "boolean"
+          },
+          {
+            "key": "summary",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "key": "new_checkin",
+        "fields": [
+          {
+            "key": "device",
+            "options": []
+          },
+          {
+            "key": "outcome",
+            "options": ["success", "failure", "other"]
+          }
+        ],
+        "variables": [
+          {
+            "key": "device_name",
+            "type": "string"
+          },
+          {
+            "key": "station_id",
+            "type": "number"
+          },
+          {
+            "key": "station_name",
+            "type": "string"
+          },
+          {
+            "key": "outcome",
+            "type": "string"
+          },
+          {
+            "key": "kind",
+            "type": "string"
+          },
+          {
+            "key": "comment",
+            "type": "string"
+          },
+          {
+            "key": "user_name",
+            "type": "string"
+          },
+          {
+            "key": "rating",
+            "type": "number"
+          },
+          {
+            "key": "checked_at",
+            "type": "string"
+          },
+          {
+            "key": "summary",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "scene_actions": [
+      {
+        "key": "find_station",
+        "fields": ["device", "connector", "min_power", "in_service_only"],
+        "outputs": [
+          {
+            "key": "found",
+            "type": "boolean"
+          },
+          {
+            "key": "count",
+            "type": "number"
+          },
+          {
+            "key": "station_id",
+            "type": "number"
+          },
+          {
+            "key": "name",
+            "type": "string"
+          },
+          {
+            "key": "address",
+            "type": "string"
+          },
+          {
+            "key": "distance_km",
+            "type": "number"
+          },
+          {
+            "key": "max_power_kw",
+            "type": "number"
+          },
+          {
+            "key": "connectors",
+            "type": "string"
+          },
+          {
+            "key": "operator",
+            "type": "string"
+          },
+          {
+            "key": "status",
+            "type": "string"
+          },
+          {
+            "key": "latitude",
+            "type": "number"
+          },
+          {
+            "key": "longitude",
+            "type": "number"
+          },
+          {
+            "key": "url",
+            "type": "string"
+          },
+          {
+            "key": "summary",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "widgets": [
+      {
+        "key": "nearby",
+        "settings": ["device", "connector", "min_power", "count"],
+        "options": {
+          "connector": ["any", "type2", "ccs", "chademo", "type1", "tesla", "domestic"],
+          "min_power": ["0", "7", "22", "50", "150"],
+          "count": ["3", "5", "8"]
+        }
+      },
+      {
+        "key": "station",
+        "settings": ["device"],
+        "options": {}
+      }
+    ]
+  }
+}

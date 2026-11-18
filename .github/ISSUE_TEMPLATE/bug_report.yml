@@ -1,0 +1,47 @@
+name: Bug report
+description: Something does not work as described in the documentation.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem. Never paste your Open Charge Map API key; you may hide the position of your home in the logs before posting.
+  - type: input
+    id: gladys-version
+    attributes:
+      label: Gladys version
+      description: Settings → System.
+      placeholder: '5.1.1'
+    validations:
+      required: true
+  - type: input
+    id: integration-version
+    attributes:
+      label: Integration version
+      description: Integrations → Open Charge Map, or Settings → Supervision.
+      placeholder: '0.1.0'
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Place and station
+      description: The country or the town (no need for your address), the search (radius, power, connectors), and the Open Charge Map id or page of the station concerned.
+      placeholder: 'Lyon, 5 km, 50 kW, CCS; https://openchargemap.org/poi/details/123456'
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Logs of the integration (Settings → Supervision), ideally with the SDK debug logs: add the environment variable `DEBUG=gladys-integration-sdk` to the container, reproduce, then copy the lines. Hide your position if you wish.
+      render: text

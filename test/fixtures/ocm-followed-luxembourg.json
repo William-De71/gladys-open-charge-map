@@ -1,0 +1,161 @@
+[
+  {
+    "UserComments": [
+      {
+        "ID": 4536,
+        "ChargePointID": 32019,
+        "CommentTypeID": 50,
+        "UserName": "",
+        "Comment": "The location on the map is wrong, however the address (Rue Thomas Edison 2) is correct. The charge location is behind the Creos office building on Rue Thomas Edison 2, lat-lon: 49.62172, 6.09577.",
+        "DateCreated": "2015-05-24T09:38:37.97Z",
+        "CheckinStatusTypeID": 200
+      }
+    ],
+    "DateLastVerified": "2015-05-24T20:46:00Z",
+    "ID": 32019,
+    "UUID": "D1243227-8EB7-4DA0-90A9-7C5AE4338FD5",
+    "DataProviderID": 1,
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00000010-01-00001",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32365,
+      "Title": "Rue Thomas Edison 2",
+      "AddressLine1": "Rue Thomas Edison 2",
+      "Town": "Strassen",
+      "Postcode": "1442",
+      "CountryID": 132,
+      "Latitude": 49.62172,
+      "Longitude": 6.09577,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35530,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11
+      },
+      {
+        "ID": 46141,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2015-05-24T20:46:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "UserComments": [
+      {
+        "ID": 21457,
+        "ChargePointID": 32022,
+        "CommentTypeID": 10,
+        "UserName": "Sbrimmers ",
+        "Comment": "Require now regestration, I used my chargy card.",
+        "Rating": 5,
+        "DateCreated": "2019-09-03T10:13:24.607Z",
+        "User": {
+          "ID": 22100,
+          "Username": "Sbrimmers "
+        },
+        "CheckinStatusTypeID": 10
+      },
+      {
+        "ID": 17349,
+        "ChargePointID": 32022,
+        "CommentTypeID": 10,
+        "UserName": "Thierry",
+        "Comment": "",
+        "Rating": 4,
+        "DateCreated": "2017-05-29T10:32:42.357Z",
+        "User": {
+          "ID": 13412,
+          "Username": "Thierry"
+        },
+        "CheckinStatusTypeID": 10
+      },
+      {
+        "ID": 14394,
+        "ChargePointID": 32022,
+        "CommentTypeID": 110,
+        "UserName": "Simon Hewison",
+        "Comment": "updated usage information (pre-registration/membership required)",
+        "DateCreated": "2016-10-13T08:20:43.527Z",
+        "User": {
+          "ID": 4575,
+          "Username": "Simon Hewison"
+        },
+        "CheckinStatusTypeID": 0
+      },
+      {
+        "ID": 14374,
+        "ChargePointID": 32022,
+        "CommentTypeID": 100,
+        "UserName": "arturo",
+        "Comment": "The charging station is located in the parking of the shopping center La Belle Etoile (new wing of the building, level -1). http://www.belle-etoile.lu/. The parking is free of charge but it may be closed on Sundays. \n\nIn order to recharge you must register (http://www.enovos.lu/particuliers/ecomobilite). Registration is free as of Oct 2016\n",
+        "DateCreated": "2016-10-09T07:49:15.667Z",
+        "User": {
+          "ID": 11906,
+          "Username": "arturo"
+        },
+        "CheckinStatusTypeID": 210
+      }
+    ],
+    "DateLastVerified": "2019-09-03T10:13:00Z",
+    "ID": 32022,
+    "UUID": "1C63A22E-9B72-4F43-ABB2-0A98418557A9",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "OperatorsReference": "Essent EM-LU-00000011-01-00001",
+    "UsageTypeID": 4,
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32368,
+      "Title": "shopping center La Belle Etoile ",
+      "AddressLine1": "Route d'Arlon",
+      "Town": "Bertrange",
+      "Postcode": "8088",
+      "CountryID": 132,
+      "Latitude": 49.622444,
+      "Longitude": 6.04822,
+      "AccessComments": "The charging station is located in the parking of the shopping center La Belle Etoile (new wing of the building, level -1).",
+      "RelatedURL": "http://www.belle-etoile.lu/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35533,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      },
+      {
+        "ID": 46146,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2019-09-03T10:13:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  }
+]

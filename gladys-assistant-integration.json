@@ -1,0 +1,1900 @@
+{
+  "manifest_version": 1,
+  "type": "device",
+  "name": "Open Charge Map",
+  "description": {
+    "en": "Public EV charging stations near your home: status, check-ins, scenes.",
+    "fr": "Bornes de recharge publiques près de chez vous : état, passages, scènes.",
+    "de": "Öffentliche Ladestationen in Ihrer Nähe: Status, Besuche, Szenen.",
+    "es": "Puntos de recarga públicos cerca de casa: estado, visitas, escenas."
+  },
+  "version": "0.1.0",
+  "docker_image": "ghcr.io/william-de71/gladys-open-charge-map:0.1.0",
+  "gladys_version": ">=5.3.0",
+  "categories": ["vehicles", "transport"],
+  "keywords": [
+    "borne de recharge",
+    "charging station",
+    "Ladestation",
+    "punto de recarga",
+    "véhicule électrique",
+    "EV charger",
+    "IRVE",
+    "Type 2",
+    "CCS",
+    "CHAdeMO"
+  ],
+  "cover_image": "https://raw.githubusercontent.com/William-De71/gladys-open-charge-map/main/cover.jpg",
+  "transports": ["cloud"],
+  "location": true,
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": {
+        "en": "Open Charge Map",
+        "fr": "Open Charge Map",
+        "de": "Open Charge Map",
+        "es": "Open Charge Map"
+      },
+      "description": {
+        "en": "Open Charge Map is the open registry of public charging stations, filled by its community and by national registries. Its API is free with a personal key: sign in on openchargemap.org, open My profile > My apps, then Register an application, and paste the key below. The live occupancy of a station is only known where an operator shares it: most stations show “in service”, not “free”. This is a community integration, not affiliated with Open Charge Map.",
+        "fr": "Open Charge Map est le registre ouvert des bornes de recharge publiques, alimenté par sa communauté et par des registres nationaux. Son API est gratuite avec une clé personnelle : connectez-vous sur openchargemap.org, ouvrez My profile > My apps, puis Register an application, et collez la clé ci-dessous. L’occupation en direct d’une borne n’est connue que si son opérateur la partage : la plupart des bornes indiquent « en service », pas « libre ». Intégration communautaire, non affiliée à Open Charge Map.",
+        "de": "Open Charge Map ist das offene Verzeichnis öffentlicher Ladestationen, gepflegt von seiner Community und nationalen Registern. Die API ist mit einem persönlichen Schlüssel kostenlos: Melden Sie sich auf openchargemap.org an, öffnen Sie My profile > My apps, dann Register an application, und fügen Sie den Schlüssel unten ein. Die Live-Belegung ist nur bekannt, wenn der Betreiber sie teilt: Die meisten Stationen zeigen „in Betrieb“, nicht „frei“. Community-Integration, nicht mit Open Charge Map verbunden.",
+        "es": "Open Charge Map es el registro abierto de puntos de recarga públicos, alimentado por su comunidad y por registros nacionales. Su API es gratuita con una clave personal: inicie sesión en openchargemap.org, abra My profile > My apps y luego Register an application, y pegue la clave abajo. La ocupación en directo solo se conoce si el operador la comparte: la mayoría de los puntos indican «en servicio», no «libre». Integración comunitaria, no afiliada a Open Charge Map."
+      },
+      "links": [
+        {
+          "url": "https://openchargemap.org/loginprovider/beginlogin",
+          "label": {
+            "en": "Sign in to Open Charge Map",
+            "fr": "Se connecter à Open Charge Map",
+            "de": "Bei Open Charge Map anmelden",
+            "es": "Iniciar sesión en Open Charge Map"
+          }
+        },
+        {
+          "url": "https://openchargemap.org/profile/applications",
+          "label": {
+            "en": "My apps (API key)",
+            "fr": "My apps (clé d’API)",
+            "de": "My apps (API-Schlüssel)",
+            "es": "My apps (clave de API)"
+          }
+        },
+        {
+          "url": "https://map.openchargemap.io",
+          "label": {
+            "en": "Open Charge Map map",
+            "fr": "Carte Open Charge Map",
+            "de": "Open-Charge-Map-Karte",
+            "es": "Mapa de Open Charge Map"
+          }
+        },
+        {
+          "url": "https://openchargemap.org/about/terms",
+          "label": {
+            "en": "Terms and data licences",
+            "fr": "Conditions et licences des données",
+            "de": "Bedingungen und Datenlizenzen",
+            "es": "Condiciones y licencias de datos"
+          }
+        }
+      ]
+    },
+    {
+      "key": "api_key",
+      "type": "secret",
+      "label": {
+        "en": "API key",
+        "fr": "Clé d’API",
+        "de": "API-Schlüssel",
+        "es": "Clave de API"
+      },
+      "description": {
+        "en": "Sent to Open Charge Map only, in the X-API-Key header.",
+        "fr": "Envoyée à Open Charge Map seulement, dans l’en-tête X-API-Key.",
+        "de": "Nur an Open Charge Map gesendet, im Header X-API-Key.",
+        "es": "Enviada solo a Open Charge Map, en la cabecera X-API-Key."
+      },
+      "required": true
+    },
+    {
+      "key": "places",
+      "type": "section",
+      "label": {
+        "en": "Places",
+        "fr": "Lieux",
+        "de": "Orte",
+        "es": "Lugares"
+      },
+      "description": {
+        "en": "Choose a house of Gladys (located in Settings > Houses), or type a position. Each place becomes a device in the Discover tab, with its nearest stations. Up to three places: home, work…",
+        "fr": "Choisissez une maison de Gladys (placée dans Paramètres > Maisons), ou saisissez une position. Chaque lieu devient un appareil dans l’onglet Découverte, avec ses bornes les plus proches. Jusqu’à trois lieux : maison, travail…",
+        "de": "Wählen Sie ein Haus von Gladys (verortet unter Einstellungen > Häuser) oder geben Sie eine Position ein. Jeder Ort wird zu einem Gerät im Tab Entdecken, mit seinen nächsten Ladestationen. Bis zu drei Orte: Zuhause, Arbeit…",
+        "es": "Elija una casa de Gladys (situada en Ajustes > Casas), o escriba una posición. Cada lugar se convierte en un dispositivo en la pestaña Descubrir, con sus puntos más cercanos. Hasta tres lugares: casa, trabajo…"
+      }
+    },
+    {
+      "key": "house_1",
+      "type": "select",
+      "source": "houses",
+      "label": {
+        "en": "House",
+        "fr": "Maison",
+        "de": "Haus",
+        "es": "Casa"
+      },
+      "description": {
+        "en": "Its position in Gladys is the center of the search.",
+        "fr": "Sa position dans Gladys est le centre de la recherche.",
+        "de": "Ihre Position in Gladys ist der Mittelpunkt der Suche.",
+        "es": "Su posición en Gladys es el centro de la búsqueda."
+      },
+      "required": false
+    },
+    {
+      "key": "coordinates_1",
+      "type": "string",
+      "label": {
+        "en": "Or a position",
+        "fr": "Ou une position",
+        "de": "Oder eine Position",
+        "es": "O una posición"
+      },
+      "description": {
+        "en": "Latitude, longitude, as a map app copies them. Wins over the house.",
+        "fr": "Latitude, longitude, comme une appli de carte les copie. Prime sur la maison.",
+        "de": "Breite, Länge, wie eine Karten-App sie kopiert. Hat Vorrang vor dem Haus.",
+        "es": "Latitud, longitud, como las copia una app de mapas. Prevalece sobre la casa."
+      },
+      "placeholder": {
+        "en": "46.3069, 4.8325",
+        "fr": "46.3069, 4.8325",
+        "de": "46.3069, 4.8325",
+        "es": "46.3069, 4.8325"
+      },
+      "required": false
+    },
+    {
+      "key": "place_2_section",
+      "type": "section",
+      "label": {
+        "en": "Place 2",
+        "fr": "Lieu 2",
+        "de": "Ort 2",
+        "es": "Lugar 2"
+      }
+    },
+    {
+      "key": "house_2",
+      "type": "select",
+      "source": "houses",
+      "label": {
+        "en": "House",
+        "fr": "Maison",
+        "de": "Haus",
+        "es": "Casa"
+      },
+      "description": {
+        "en": "Its position in Gladys is the center of the search.",
+        "fr": "Sa position dans Gladys est le centre de la recherche.",
+        "de": "Ihre Position in Gladys ist der Mittelpunkt der Suche.",
+        "es": "Su posición en Gladys es el centro de la búsqueda."
+      },
+      "required": false
+    },
+    {
+      "key": "coordinates_2",
+      "type": "string",
+      "label": {
+        "en": "Or a position",
+        "fr": "Ou une position",
+        "de": "Oder eine Position",
+        "es": "O una posición"
+      },
+      "description": {
+        "en": "Latitude, longitude, as a map app copies them. Wins over the house.",
+        "fr": "Latitude, longitude, comme une appli de carte les copie. Prime sur la maison.",
+        "de": "Breite, Länge, wie eine Karten-App sie kopiert. Hat Vorrang vor dem Haus.",
+        "es": "Latitud, longitud, como las copia una app de mapas. Prevalece sobre la casa."
+      },
+      "placeholder": {
+        "en": "46.3069, 4.8325",
+        "fr": "46.3069, 4.8325",
+        "de": "46.3069, 4.8325",
+        "es": "46.3069, 4.8325"
+      },
+      "required": false
+    },
+    {
+      "key": "place_3_section",
+      "type": "section",
+      "label": {
+        "en": "Place 3",
+        "fr": "Lieu 3",
+        "de": "Ort 3",
+        "es": "Lugar 3"
+      }
+    },
+    {
+      "key": "house_3",
+      "type": "select",
+      "source": "houses",
+      "label": {
+        "en": "House",
+        "fr": "Maison",
+        "de": "Haus",
+        "es": "Casa"
+      },
+      "description": {
+        "en": "Its position in Gladys is the center of the search.",
+        "fr": "Sa position dans Gladys est le centre de la recherche.",
+        "de": "Ihre Position in Gladys ist der Mittelpunkt der Suche.",
+        "es": "Su posición en Gladys es el centro de la búsqueda."
+      },
+      "required": false
+    },
+    {
+      "key": "coordinates_3",
+      "type": "string",
+      "label": {
+        "en": "Or a position",
+        "fr": "Ou une position",
+        "de": "Oder eine Position",
+        "es": "O una posición"
+      },
+      "description": {
+        "en": "Latitude, longitude, as a map app copies them. Wins over the house.",
+        "fr": "Latitude, longitude, comme une appli de carte les copie. Prime sur la maison.",
+        "de": "Breite, Länge, wie eine Karten-App sie kopiert. Hat Vorrang vor dem Haus.",
+        "es": "Latitud, longitud, como las copia una app de mapas. Prevalece sobre la casa."
+      },
+      "placeholder": {
+        "en": "46.3069, 4.8325",
+        "fr": "46.3069, 4.8325",
+        "de": "46.3069, 4.8325",
+        "es": "46.3069, 4.8325"
+      },
+      "required": false
+    },
+    {
+      "key": "search",
+      "type": "section",
+      "label": {
+        "en": "Search",
+        "fr": "Recherche",
+        "de": "Suche",
+        "es": "Búsqueda"
+      },
+      "description": {
+        "en": "The same for every place. The widgets can narrow it further.",
+        "fr": "La même pour tous les lieux. Les widgets peuvent l’affiner encore.",
+        "de": "Gleich für alle Orte. Die Widgets können sie weiter eingrenzen.",
+        "es": "La misma para todos los lugares. Los widgets pueden afinarla más."
+      }
+    },
+    {
+      "key": "radius",
+      "type": "select",
+      "default": "5",
+      "required": false,
+      "label": {
+        "en": "Radius",
+        "fr": "Rayon",
+        "de": "Umkreis",
+        "es": "Radio"
+      },
+      "options": [
+        {
+          "value": "1",
+          "label": {
+            "en": "1 km",
+            "fr": "1 km",
+            "de": "1 km",
+            "es": "1 km"
+          }
+        },
+        {
+          "value": "2",
+          "label": {
+            "en": "2 km",
+            "fr": "2 km",
+            "de": "2 km",
+            "es": "2 km"
+          }
+        },
+        {
+          "value": "5",
+          "label": {
+            "en": "5 km",
+            "fr": "5 km",
+            "de": "5 km",
+            "es": "5 km"
+          }
+        },
+        {
+          "value": "10",
+          "label": {
+            "en": "10 km",
+            "fr": "10 km",
+            "de": "10 km",
+            "es": "10 km"
+          }
+        },
+        {
+          "value": "20",
+          "label": {
+            "en": "20 km",
+            "fr": "20 km",
+            "de": "20 km",
+            "es": "20 km"
+          }
+        },
+        {
+          "value": "50",
+          "label": {
+            "en": "50 km",
+            "fr": "50 km",
+            "de": "50 km",
+            "es": "50 km"
+          }
+        }
+      ]
+    },
+    {
+      "key": "min_power",
+      "type": "select",
+      "default": "0",
+      "required": false,
+      "label": {
+        "en": "Minimum power",
+        "fr": "Puissance minimale",
+        "de": "Mindestleistung",
+        "es": "Potencia mínima"
+      },
+      "description": {
+        "en": "Of at least one connector.",
+        "fr": "D’au moins une prise.",
+        "de": "Mindestens eines Steckers.",
+        "es": "De al menos un conector."
+      },
+      "options": [
+        {
+          "value": "0",
+          "label": {
+            "en": "Any",
+            "fr": "Toutes",
+            "de": "Beliebig",
+            "es": "Cualquiera"
+          }
+        },
+        {
+          "value": "7",
+          "label": {
+            "en": "7 kW",
+            "fr": "7 kW",
+            "de": "7 kW",
+            "es": "7 kW"
+          }
+        },
+        {
+          "value": "11",
+          "label": {
+            "en": "11 kW",
+            "fr": "11 kW",
+            "de": "11 kW",
+            "es": "11 kW"
+          }
+        },
+        {
+          "value": "22",
+          "label": {
+            "en": "22 kW",
+            "fr": "22 kW",
+            "de": "22 kW",
+            "es": "22 kW"
+          }
+        },
+        {
+          "value": "50",
+          "label": {
+            "en": "50 kW",
+            "fr": "50 kW",
+            "de": "50 kW",
+            "es": "50 kW"
+          }
+        },
+        {
+          "value": "150",
+          "label": {
+            "en": "150 kW",
+            "fr": "150 kW",
+            "de": "150 kW",
+            "es": "150 kW"
+          }
+        }
+      ]
+    },
+    {
+      "key": "connectors",
+      "type": "multi_select",
+      "required": false,
+      "label": {
+        "en": "Connectors",
+        "fr": "Prises",
+        "de": "Stecker",
+        "es": "Conectores"
+      },
+      "description": {
+        "en": "None checked: every connector.",
+        "fr": "Aucune cochée : toutes les prises.",
+        "de": "Keiner ausgewählt: alle Stecker.",
+        "es": "Ninguno marcado: todos los conectores."
+      },
+      "options": [
+        {
+          "value": "type2",
+          "label": {
+            "en": "Type 2",
+            "fr": "Type 2",
+            "de": "Typ 2",
+            "es": "Tipo 2"
+          }
+        },
+        {
+          "value": "ccs",
+          "label": {
+            "en": "CCS (Combo)",
+            "fr": "CCS (Combo)",
+            "de": "CCS (Combo)",
+            "es": "CCS (Combo)"
+          }
+        },
+        {
+          "value": "chademo",
+          "label": {
+            "en": "CHAdeMO",
+            "fr": "CHAdeMO",
+            "de": "CHAdeMO",
+            "es": "CHAdeMO"
+          }
+        },
+        {
+          "value": "type1",
+          "label": {
+            "en": "Type 1 (J1772)",
+            "fr": "Type 1 (J1772)",
+            "de": "Typ 1 (J1772)",
+            "es": "Tipo 1 (J1772)"
+          }
+        },
+        {
+          "value": "tesla",
+          "label": {
+            "en": "Tesla / NACS",
+            "fr": "Tesla / NACS",
+            "de": "Tesla / NACS",
+            "es": "Tesla / NACS"
+          }
+        },
+        {
+          "value": "domestic",
+          "label": {
+            "en": "Domestic socket",
+            "fr": "Prise domestique",
+            "de": "Haushaltssteckdose",
+            "es": "Enchufe doméstico"
+          }
+        }
+      ]
+    },
+    {
+      "key": "public_only",
+      "type": "boolean",
+      "default": true,
+      "required": false,
+      "label": {
+        "en": "Public stations only",
+        "fr": "Bornes publiques seulement",
+        "de": "Nur öffentliche Ladestationen",
+        "es": "Solo puntos públicos"
+      },
+      "description": {
+        "en": "Leaves out the private ones and those for customers only.",
+        "fr": "Écarte les bornes privées et celles réservées aux clients.",
+        "de": "Lässt private und Kunden vorbehaltene Stationen weg.",
+        "es": "Excluye los privados y los reservados a clientes."
+      }
+    },
+    {
+      "key": "offered",
+      "type": "select",
+      "default": "10",
+      "required": false,
+      "label": {
+        "en": "Stations offered",
+        "fr": "Bornes proposées",
+        "de": "Angebotene Ladestationen",
+        "es": "Puntos propuestos"
+      },
+      "description": {
+        "en": "The nearest of each place, in the Discover tab: add those you use.",
+        "fr": "Les plus proches de chaque lieu, dans l’onglet Découverte : ajoutez celles que vous utilisez.",
+        "de": "Die nächsten jedes Ortes, im Tab Entdecken: Fügen Sie die hinzu, die Sie nutzen.",
+        "es": "Los más cercanos de cada lugar, en la pestaña Descubrir: añada los que use."
+      },
+      "options": [
+        {
+          "value": "5",
+          "label": {
+            "en": "5",
+            "fr": "5",
+            "de": "5",
+            "es": "5"
+          }
+        },
+        {
+          "value": "10",
+          "label": {
+            "en": "10",
+            "fr": "10",
+            "de": "10",
+            "es": "10"
+          }
+        },
+        {
+          "value": "20",
+          "label": {
+            "en": "20",
+            "fr": "20",
+            "de": "20",
+            "es": "20"
+          }
+        },
+        {
+          "value": "50",
+          "label": {
+            "en": "50",
+            "fr": "50",
+            "de": "50",
+            "es": "50"
+          }
+        }
+      ]
+    },
+    {
+      "key": "options",
+      "type": "section",
+      "label": {
+        "en": "Options",
+        "fr": "Options",
+        "de": "Optionen",
+        "es": "Opciones"
+      }
+    },
+    {
+      "key": "interval",
+      "type": "select",
+      "default": "6",
+      "required": false,
+      "label": {
+        "en": "Open Charge Map read every",
+        "fr": "Open Charge Map lu toutes les",
+        "de": "Open Charge Map gelesen alle",
+        "es": "Open Charge Map leído cada"
+      },
+      "description": {
+        "en": "One request per place, one more for the stations you follow. Stations change slowly: the fair use policy asks not to repeat queries.",
+        "fr": "Une requête par lieu, une de plus pour les bornes suivies. Les bornes changent peu : la politique d’usage loyal demande de ne pas répéter les requêtes.",
+        "de": "Eine Anfrage pro Ort, eine weitere für die verfolgten Stationen. Stationen ändern sich selten: Die Fair-Use-Regel bittet, Anfragen nicht zu wiederholen.",
+        "es": "Una petición por lugar, una más para los puntos seguidos. Los puntos cambian poco: la política de uso justo pide no repetir peticiones."
+      },
+      "options": [
+        {
+          "value": "1",
+          "label": {
+            "en": "1 hour",
+            "fr": "1 heure",
+            "de": "1 Stunde",
+            "es": "1 hora"
+          }
+        },
+        {
+          "value": "3",
+          "label": {
+            "en": "3 hours",
+            "fr": "3 heures",
+            "de": "3 Stunden",
+            "es": "3 horas"
+          }
+        },
+        {
+          "value": "6",
+          "label": {
+            "en": "6 hours",
+            "fr": "6 heures",
+            "de": "6 Stunden",
+            "es": "6 horas"
+          }
+        },
+        {
+          "value": "12",
+          "label": {
+            "en": "12 hours",
+            "fr": "12 heures",
+            "de": "12 Stunden",
+            "es": "12 horas"
+          }
+        },
+        {
+          "value": "24",
+          "label": {
+            "en": "24 hours",
+            "fr": "24 heures",
+            "de": "24 Stunden",
+            "es": "24 horas"
+          }
+        }
+      ]
+    },
+    {
+      "key": "language",
+      "type": "select",
+      "default": "auto",
+      "required": false,
+      "label": {
+        "en": "Language of the texts",
+        "fr": "Langue des textes",
+        "de": "Sprache der Texte",
+        "es": "Idioma de los textos"
+      },
+      "description": {
+        "en": "Device names and scene summaries. Automatic follows the language of the dashboard.",
+        "fr": "Noms des appareils et résumés des scènes. Automatique suit la langue du tableau de bord.",
+        "de": "Gerätenamen und Szenen-Zusammenfassungen. Automatisch folgt der Sprache des Dashboards.",
+        "es": "Nombres de dispositivos y resúmenes de escenas. Automático sigue el idioma del panel."
+      },
+      "options": [
+        {
+          "value": "auto",
+          "label": {
+            "en": "Automatic",
+            "fr": "Automatique",
+            "de": "Automatisch",
+            "es": "Automático"
+          }
+        },
+        {
+          "value": "en",
+          "label": {
+            "en": "English",
+            "fr": "English",
+            "de": "English",
+            "es": "English"
+          }
+        },
+        {
+          "value": "fr",
+          "label": {
+            "en": "Français",
+            "fr": "Français",
+            "de": "Français",
+            "es": "Français"
+          }
+        },
+        {
+          "value": "de",
+          "label": {
+            "en": "Deutsch",
+            "fr": "Deutsch",
+            "de": "Deutsch",
+            "es": "Deutsch"
+          }
+        },
+        {
+          "value": "es",
+          "label": {
+            "en": "Español",
+            "fr": "Español",
+            "de": "Español",
+            "es": "Español"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "key": "check",
+      "timeout_seconds": 90,
+      "label": {
+        "en": "Test the key and the places",
+        "fr": "Tester la clé et les lieux",
+        "de": "Schlüssel und Orte testen",
+        "es": "Probar la clave y los lugares"
+      },
+      "description": {
+        "en": "Reads Open Charge Map now for each place and shows the stations found.",
+        "fr": "Lit Open Charge Map tout de suite pour chaque lieu et affiche les bornes trouvées.",
+        "de": "Liest Open Charge Map sofort für jeden Ort und zeigt die gefundenen Stationen.",
+        "es": "Lee Open Charge Map ahora para cada lugar y muestra los puntos encontrados."
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "key": "nearby",
+      "label": {
+        "en": "Nearby charging",
+        "fr": "Bornes à proximité",
+        "de": "Laden in der Nähe",
+        "es": "Recarga cercana"
+      },
+      "description": {
+        "en": "The nearest stations of a place: status, power, connectors, access and cost.",
+        "fr": "Les bornes les plus proches d’un lieu : état, puissance, prises, accès et tarif.",
+        "de": "Die nächsten Ladestationen eines Ortes: Status, Leistung, Stecker, Zugang, Preis.",
+        "es": "Los puntos más cercanos de un lugar: estado, potencia, conectores, acceso y tarifa."
+      },
+      "icon": "map-pin",
+      "settings": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A place (“Charging stations · …”). Leave empty for the first.",
+            "fr": "Un lieu (« Bornes de recharge · … »). Laisser vide pour le premier.",
+            "de": "Ein Ort („Ladestationen · …“). Leer lassen für den ersten.",
+            "es": "Un lugar («Puntos de recarga · …»). Dejar vacío para el primero."
+          },
+          "required": false
+        },
+        {
+          "key": "connector",
+          "type": "select",
+          "label": {
+            "en": "Connector",
+            "fr": "Prise",
+            "de": "Stecker",
+            "es": "Conector"
+          },
+          "options": [
+            {
+              "value": "any",
+              "label": {
+                "en": "Any",
+                "fr": "Toutes",
+                "de": "Beliebig",
+                "es": "Cualquiera"
+              }
+            },
+            {
+              "value": "type2",
+              "label": {
+                "en": "Type 2",
+                "fr": "Type 2",
+                "de": "Typ 2",
+                "es": "Tipo 2"
+              }
+            },
+            {
+              "value": "ccs",
+              "label": {
+                "en": "CCS (Combo)",
+                "fr": "CCS (Combo)",
+                "de": "CCS (Combo)",
+                "es": "CCS (Combo)"
+              }
+            },
+            {
+              "value": "chademo",
+              "label": {
+                "en": "CHAdeMO",
+                "fr": "CHAdeMO",
+                "de": "CHAdeMO",
+                "es": "CHAdeMO"
+              }
+            },
+            {
+              "value": "type1",
+              "label": {
+                "en": "Type 1 (J1772)",
+                "fr": "Type 1 (J1772)",
+                "de": "Typ 1 (J1772)",
+                "es": "Tipo 1 (J1772)"
+              }
+            },
+            {
+              "value": "tesla",
+              "label": {
+                "en": "Tesla / NACS",
+                "fr": "Tesla / NACS",
+                "de": "Tesla / NACS",
+                "es": "Tesla / NACS"
+              }
+            },
+            {
+              "value": "domestic",
+              "label": {
+                "en": "Domestic socket",
+                "fr": "Prise domestique",
+                "de": "Haushaltssteckdose",
+                "es": "Enchufe doméstico"
+              }
+            }
+          ],
+          "default": "any",
+          "required": false
+        },
+        {
+          "key": "min_power",
+          "type": "select",
+          "label": {
+            "en": "Minimum power",
+            "fr": "Puissance minimale",
+            "de": "Mindestleistung",
+            "es": "Potencia mínima"
+          },
+          "options": [
+            {
+              "value": "0",
+              "label": {
+                "en": "Any",
+                "fr": "Toutes",
+                "de": "Beliebig",
+                "es": "Cualquiera"
+              }
+            },
+            {
+              "value": "7",
+              "label": {
+                "en": "7 kW",
+                "fr": "7 kW",
+                "de": "7 kW",
+                "es": "7 kW"
+              }
+            },
+            {
+              "value": "22",
+              "label": {
+                "en": "22 kW",
+                "fr": "22 kW",
+                "de": "22 kW",
+                "es": "22 kW"
+              }
+            },
+            {
+              "value": "50",
+              "label": {
+                "en": "50 kW",
+                "fr": "50 kW",
+                "de": "50 kW",
+                "es": "50 kW"
+              }
+            },
+            {
+              "value": "150",
+              "label": {
+                "en": "150 kW",
+                "fr": "150 kW",
+                "de": "150 kW",
+                "es": "150 kW"
+              }
+            }
+          ],
+          "default": "0",
+          "required": false
+        },
+        {
+          "key": "count",
+          "type": "select",
+          "label": {
+            "en": "Stations shown",
+            "fr": "Bornes affichées",
+            "de": "Angezeigte Stationen",
+            "es": "Puntos mostrados"
+          },
+          "options": [
+            {
+              "value": "3",
+              "label": {
+                "en": "3",
+                "fr": "3",
+                "de": "3",
+                "es": "3"
+              }
+            },
+            {
+              "value": "5",
+              "label": {
+                "en": "5",
+                "fr": "5",
+                "de": "5",
+                "es": "5"
+              }
+            },
+            {
+              "value": "8",
+              "label": {
+                "en": "8",
+                "fr": "8",
+                "de": "8",
+                "es": "8"
+              }
+            }
+          ],
+          "default": "5",
+          "required": false
+        }
+      ]
+    },
+    {
+      "key": "station",
+      "label": {
+        "en": "Charging station",
+        "fr": "Borne de recharge",
+        "de": "Ladestation",
+        "es": "Punto de recarga"
+      },
+      "description": {
+        "en": "One station you follow: status, power, points, the last check-ins of drivers.",
+        "fr": "Une borne suivie : état, puissance, points de charge, derniers passages des conducteurs.",
+        "de": "Eine verfolgte Station: Status, Leistung, Ladepunkte, letzte Besuche.",
+        "es": "Un punto seguido: estado, potencia, puntos de carga, últimas visitas."
+      },
+      "icon": "battery-charging",
+      "settings": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A station you added. Leave empty for the first.",
+            "fr": "Une borne que vous avez ajoutée. Laisser vide pour la première.",
+            "de": "Eine hinzugefügte Ladestation. Leer lassen für die erste.",
+            "es": "Un punto que haya añadido. Dejar vacío para el primero."
+          },
+          "required": false
+        }
+      ]
+    }
+  ],
+  "scene_triggers": [
+    {
+      "key": "new_station",
+      "label": {
+        "en": "Open Charge Map: new station nearby",
+        "fr": "Open Charge Map : nouvelle borne à proximité",
+        "de": "Open Charge Map: neue Ladestation in der Nähe",
+        "es": "Open Charge Map: nuevo punto cercano"
+      },
+      "description": {
+        "en": "A station recently listed on Open Charge Map appears within the radius of a place, matching the search.",
+        "fr": "Une borne récemment listée sur Open Charge Map apparaît dans le rayon d’un lieu, selon la recherche.",
+        "de": "Eine kürzlich auf Open Charge Map gelistete Station erscheint im Umkreis eines Ortes, passend zur Suche.",
+        "es": "Un punto recién listado en Open Charge Map aparece en el radio de un lugar, según la búsqueda."
+      },
+      "fields": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A place. Leave empty for any.",
+            "fr": "Un lieu. Laisser vide pour tous.",
+            "de": "Ein Ort. Leer lassen für alle.",
+            "es": "Un lugar. Dejar vacío para cualquiera."
+          },
+          "required": false
+        },
+        {
+          "key": "fast",
+          "type": "select",
+          "label": {
+            "en": "Fast (50 kW+)",
+            "fr": "Rapide (50 kW+)",
+            "de": "Schnell (50 kW+)",
+            "es": "Rápido (50 kW+)"
+          },
+          "description": {
+            "en": "Leave empty for every station.",
+            "fr": "Laisser vide pour toutes les bornes.",
+            "de": "Leer lassen für alle Stationen.",
+            "es": "Dejar vacío para todos los puntos."
+          },
+          "options": [
+            {
+              "value": "yes",
+              "label": {
+                "en": "Yes",
+                "fr": "Oui",
+                "de": "Ja",
+                "es": "Sí"
+              }
+            },
+            {
+              "value": "no",
+              "label": {
+                "en": "No",
+                "fr": "Non",
+                "de": "Nein",
+                "es": "No"
+              }
+            }
+          ],
+          "required": false
+        }
+      ],
+      "variables": [
+        {
+          "key": "device_name",
+          "type": "string",
+          "label": {
+            "en": "Device name",
+            "fr": "Nom de l’appareil",
+            "de": "Gerätename",
+            "es": "Nombre del dispositivo"
+          }
+        },
+        {
+          "key": "station_id",
+          "type": "number",
+          "label": {
+            "en": "Open Charge Map id",
+            "fr": "Identifiant Open Charge Map",
+            "de": "Open-Charge-Map-ID",
+            "es": "Id de Open Charge Map"
+          }
+        },
+        {
+          "key": "station_name",
+          "type": "string",
+          "label": {
+            "en": "Station",
+            "fr": "Borne",
+            "de": "Ladestation",
+            "es": "Punto de recarga"
+          }
+        },
+        {
+          "key": "address",
+          "type": "string",
+          "label": {
+            "en": "Address",
+            "fr": "Adresse",
+            "de": "Adresse",
+            "es": "Dirección"
+          }
+        },
+        {
+          "key": "distance_km",
+          "type": "number",
+          "label": {
+            "en": "Distance (km)",
+            "fr": "Distance (km)",
+            "de": "Entfernung (km)",
+            "es": "Distancia (km)"
+          }
+        },
+        {
+          "key": "max_power_kw",
+          "type": "number",
+          "label": {
+            "en": "Max power (kW)",
+            "fr": "Puissance max (kW)",
+            "de": "Max. Leistung (kW)",
+            "es": "Potencia máx. (kW)"
+          }
+        },
+        {
+          "key": "fast",
+          "type": "string",
+          "label": {
+            "en": "Fast",
+            "fr": "Rapide",
+            "de": "Schnell",
+            "es": "Rápido"
+          },
+          "description": {
+            "en": "yes or no.",
+            "fr": "yes ou no.",
+            "de": "yes oder no.",
+            "es": "yes o no."
+          }
+        },
+        {
+          "key": "connectors",
+          "type": "string",
+          "label": {
+            "en": "Connectors",
+            "fr": "Prises",
+            "de": "Stecker",
+            "es": "Conectores"
+          },
+          "description": {
+            "en": "“2 × CCS2 150 kW, 4 × Type 2 22 kW”.",
+            "fr": "« 2 × CCS2 150 kW, 4 × Type 2 22 kW ».",
+            "de": "„2 × CCS2 150 kW, 4 × Type 2 22 kW“.",
+            "es": "«2 × CCS2 150 kW, 4 × Type 2 22 kW»."
+          }
+        },
+        {
+          "key": "operator",
+          "type": "string",
+          "label": {
+            "en": "Operator",
+            "fr": "Opérateur",
+            "de": "Betreiber",
+            "es": "Operador"
+          }
+        },
+        {
+          "key": "status",
+          "type": "string",
+          "label": {
+            "en": "Status",
+            "fr": "État",
+            "de": "Status",
+            "es": "Estado"
+          },
+          "description": {
+            "en": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed or unknown.",
+            "fr": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed ou unknown.",
+            "de": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed oder unknown.",
+            "es": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed o unknown."
+          }
+        },
+        {
+          "key": "latitude",
+          "type": "number",
+          "label": {
+            "en": "Latitude",
+            "fr": "Latitude",
+            "de": "Breite",
+            "es": "Latitud"
+          }
+        },
+        {
+          "key": "longitude",
+          "type": "number",
+          "label": {
+            "en": "Longitude",
+            "fr": "Longitude",
+            "de": "Länge",
+            "es": "Longitud"
+          }
+        },
+        {
+          "key": "url",
+          "type": "string",
+          "label": {
+            "en": "Open Charge Map page",
+            "fr": "Page Open Charge Map",
+            "de": "Open-Charge-Map-Seite",
+            "es": "Página de Open Charge Map"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, fertig für eine Nachricht.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
+        }
+      ]
+    },
+    {
+      "key": "station_status_changed",
+      "label": {
+        "en": "Open Charge Map: station status changed",
+        "fr": "Open Charge Map : état d’une borne modifié",
+        "de": "Open Charge Map: Status einer Ladestation geändert",
+        "es": "Open Charge Map: estado de un punto cambiado"
+      },
+      "description": {
+        "en": "A station you added goes out of service, comes back, or changes status on Open Charge Map.",
+        "fr": "Une borne que vous avez ajoutée passe hors service, revient, ou change d’état sur Open Charge Map.",
+        "de": "Eine hinzugefügte Station fällt aus, ist wieder da oder ändert ihren Status auf Open Charge Map.",
+        "es": "Un punto añadido queda fuera de servicio, vuelve, o cambia de estado en Open Charge Map."
+      },
+      "fields": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A station you added. Leave empty for any.",
+            "fr": "Une borne que vous avez ajoutée. Laisser vide pour toutes.",
+            "de": "Eine hinzugefügte Ladestation. Leer lassen für alle.",
+            "es": "Un punto que haya añadido. Dejar vacío para cualquiera."
+          },
+          "required": false
+        },
+        {
+          "key": "change",
+          "type": "select",
+          "label": {
+            "en": "Change",
+            "fr": "Changement",
+            "de": "Änderung",
+            "es": "Cambio"
+          },
+          "description": {
+            "en": "Leave empty for every change.",
+            "fr": "Laisser vide pour tous les changements.",
+            "de": "Leer lassen für jede Änderung.",
+            "es": "Dejar vacío para todos los cambios."
+          },
+          "options": [
+            {
+              "value": "unavailable",
+              "label": {
+                "en": "Out of service",
+                "fr": "Passe hors service",
+                "de": "Außer Betrieb",
+                "es": "Fuera de servicio"
+              }
+            },
+            {
+              "value": "available",
+              "label": {
+                "en": "Back in service",
+                "fr": "Revient en service",
+                "de": "Wieder in Betrieb",
+                "es": "De nuevo en servicio"
+              }
+            },
+            {
+              "value": "other",
+              "label": {
+                "en": "Other change",
+                "fr": "Autre changement",
+                "de": "Andere Änderung",
+                "es": "Otro cambio"
+              }
+            }
+          ],
+          "required": false
+        }
+      ],
+      "variables": [
+        {
+          "key": "device_name",
+          "type": "string",
+          "label": {
+            "en": "Device name",
+            "fr": "Nom de l’appareil",
+            "de": "Gerätename",
+            "es": "Nombre del dispositivo"
+          }
+        },
+        {
+          "key": "station_id",
+          "type": "number",
+          "label": {
+            "en": "Open Charge Map id",
+            "fr": "Identifiant Open Charge Map",
+            "de": "Open-Charge-Map-ID",
+            "es": "Id de Open Charge Map"
+          }
+        },
+        {
+          "key": "station_name",
+          "type": "string",
+          "label": {
+            "en": "Station",
+            "fr": "Borne",
+            "de": "Ladestation",
+            "es": "Punto de recarga"
+          }
+        },
+        {
+          "key": "status",
+          "type": "string",
+          "label": {
+            "en": "Status",
+            "fr": "État",
+            "de": "Status",
+            "es": "Estado"
+          },
+          "description": {
+            "en": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed or unknown.",
+            "fr": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed ou unknown.",
+            "de": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed oder unknown.",
+            "es": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed o unknown."
+          }
+        },
+        {
+          "key": "previous_status",
+          "type": "string",
+          "label": {
+            "en": "Previous status",
+            "fr": "État précédent",
+            "de": "Vorheriger Status",
+            "es": "Estado anterior"
+          }
+        },
+        {
+          "key": "change",
+          "type": "string",
+          "label": {
+            "en": "Change",
+            "fr": "Changement",
+            "de": "Änderung",
+            "es": "Cambio"
+          },
+          "description": {
+            "en": "unavailable, available or other.",
+            "fr": "unavailable, available ou other.",
+            "de": "unavailable, available oder other.",
+            "es": "unavailable, available u other."
+          }
+        },
+        {
+          "key": "operational",
+          "type": "boolean",
+          "label": {
+            "en": "In service",
+            "fr": "En service",
+            "de": "In Betrieb",
+            "es": "En servicio"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, fertig für eine Nachricht.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
+        }
+      ]
+    },
+    {
+      "key": "new_checkin",
+      "label": {
+        "en": "Open Charge Map: new check-in",
+        "fr": "Open Charge Map : nouveau passage",
+        "de": "Open Charge Map: neuer Besuch",
+        "es": "Open Charge Map: nueva visita"
+      },
+      "description": {
+        "en": "A driver reports a charge, a problem or a comment at a station you added.",
+        "fr": "Un conducteur signale une recharge, un problème ou un commentaire sur une borne que vous avez ajoutée.",
+        "de": "Ein Fahrer meldet einen Ladevorgang, ein Problem oder einen Kommentar zu einer hinzugefügten Station.",
+        "es": "Un conductor indica una recarga, un problema o un comentario en un punto añadido."
+      },
+      "fields": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A station you added. Leave empty for any.",
+            "fr": "Une borne que vous avez ajoutée. Laisser vide pour toutes.",
+            "de": "Eine hinzugefügte Ladestation. Leer lassen für alle.",
+            "es": "Un punto que haya añadido. Dejar vacío para cualquiera."
+          },
+          "required": false
+        },
+        {
+          "key": "outcome",
+          "type": "select",
+          "label": {
+            "en": "Outcome",
+            "fr": "Résultat",
+            "de": "Ergebnis",
+            "es": "Resultado"
+          },
+          "description": {
+            "en": "Leave empty for every check-in.",
+            "fr": "Laisser vide pour tous les passages.",
+            "de": "Leer lassen für jeden Besuch.",
+            "es": "Dejar vacío para todas las visitas."
+          },
+          "options": [
+            {
+              "value": "success",
+              "label": {
+                "en": "Charged / OK",
+                "fr": "Recharge réussie / OK",
+                "de": "Geladen / OK",
+                "es": "Recarga correcta / OK"
+              }
+            },
+            {
+              "value": "failure",
+              "label": {
+                "en": "Problem",
+                "fr": "Problème",
+                "de": "Problem",
+                "es": "Problema"
+              }
+            },
+            {
+              "value": "other",
+              "label": {
+                "en": "Other",
+                "fr": "Autre",
+                "de": "Sonstiges",
+                "es": "Otro"
+              }
+            }
+          ],
+          "required": false
+        }
+      ],
+      "variables": [
+        {
+          "key": "device_name",
+          "type": "string",
+          "label": {
+            "en": "Device name",
+            "fr": "Nom de l’appareil",
+            "de": "Gerätename",
+            "es": "Nombre del dispositivo"
+          }
+        },
+        {
+          "key": "station_id",
+          "type": "number",
+          "label": {
+            "en": "Open Charge Map id",
+            "fr": "Identifiant Open Charge Map",
+            "de": "Open-Charge-Map-ID",
+            "es": "Id de Open Charge Map"
+          }
+        },
+        {
+          "key": "station_name",
+          "type": "string",
+          "label": {
+            "en": "Station",
+            "fr": "Borne",
+            "de": "Ladestation",
+            "es": "Punto de recarga"
+          }
+        },
+        {
+          "key": "outcome",
+          "type": "string",
+          "label": {
+            "en": "Outcome",
+            "fr": "Résultat",
+            "de": "Ergebnis",
+            "es": "Resultado"
+          },
+          "description": {
+            "en": "success, failure or other.",
+            "fr": "success, failure ou other.",
+            "de": "success, failure oder other.",
+            "es": "success, failure u other."
+          }
+        },
+        {
+          "key": "kind",
+          "type": "string",
+          "label": {
+            "en": "Kind",
+            "fr": "Type",
+            "de": "Art",
+            "es": "Tipo"
+          },
+          "description": {
+            "en": "charged, failed_problem, in_use_ice, fault_report, comment…",
+            "fr": "charged, failed_problem, in_use_ice, fault_report, comment…",
+            "de": "charged, failed_problem, in_use_ice, fault_report, comment…",
+            "es": "charged, failed_problem, in_use_ice, fault_report, comment…"
+          }
+        },
+        {
+          "key": "comment",
+          "type": "string",
+          "label": {
+            "en": "Comment",
+            "fr": "Commentaire",
+            "de": "Kommentar",
+            "es": "Comentario"
+          }
+        },
+        {
+          "key": "user_name",
+          "type": "string",
+          "label": {
+            "en": "Driver",
+            "fr": "Conducteur",
+            "de": "Fahrer",
+            "es": "Conductor"
+          }
+        },
+        {
+          "key": "rating",
+          "type": "number",
+          "label": {
+            "en": "Rating (1 to 5)",
+            "fr": "Note (1 à 5)",
+            "de": "Bewertung (1 bis 5)",
+            "es": "Nota (1 a 5)"
+          }
+        },
+        {
+          "key": "checked_at",
+          "type": "string",
+          "label": {
+            "en": "Date",
+            "fr": "Date",
+            "de": "Datum",
+            "es": "Fecha"
+          },
+          "description": {
+            "en": "ISO 8601 (UTC).",
+            "fr": "ISO 8601 (UTC).",
+            "de": "ISO 8601 (UTC).",
+            "es": "ISO 8601 (UTC)."
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, fertig für eine Nachricht.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
+        }
+      ]
+    }
+  ],
+  "scene_actions": [
+    {
+      "key": "find_station",
+      "label": {
+        "en": "Open Charge Map: find a station",
+        "fr": "Open Charge Map : trouver une borne",
+        "de": "Open Charge Map: Ladestation finden",
+        "es": "Open Charge Map: buscar un punto"
+      },
+      "description": {
+        "en": "The nearest station of a place for a connector and a power, from the last reading, for a message or a condition.",
+        "fr": "La borne la plus proche d’un lieu pour une prise et une puissance, d’après la dernière lecture, pour un message ou une condition.",
+        "de": "Die nächste Ladestation eines Ortes für einen Stecker und eine Leistung, aus der letzten Abfrage, für eine Nachricht oder Bedingung.",
+        "es": "El punto más cercano de un lugar para un conector y una potencia, según la última lectura, para un mensaje o una condición."
+      },
+      "timeout_seconds": 10,
+      "fields": [
+        {
+          "key": "device",
+          "type": "select",
+          "source": "devices",
+          "label": {
+            "en": "Device",
+            "fr": "Appareil",
+            "de": "Gerät",
+            "es": "Dispositivo"
+          },
+          "description": {
+            "en": "A place (“Charging stations · …”). Leave empty for the first.",
+            "fr": "Un lieu (« Bornes de recharge · … »). Laisser vide pour le premier.",
+            "de": "Ein Ort („Ladestationen · …“). Leer lassen für den ersten.",
+            "es": "Un lugar («Puntos de recarga · …»). Dejar vacío para el primero."
+          },
+          "required": false
+        },
+        {
+          "key": "connector",
+          "type": "select",
+          "label": {
+            "en": "Connector",
+            "fr": "Prise",
+            "de": "Stecker",
+            "es": "Conector"
+          },
+          "description": {
+            "en": "Leave empty for any.",
+            "fr": "Laisser vide pour toutes.",
+            "de": "Leer lassen für alle.",
+            "es": "Dejar vacío para cualquiera."
+          },
+          "options": [
+            {
+              "value": "type2",
+              "label": {
+                "en": "Type 2",
+                "fr": "Type 2",
+                "de": "Typ 2",
+                "es": "Tipo 2"
+              }
+            },
+            {
+              "value": "ccs",
+              "label": {
+                "en": "CCS (Combo)",
+                "fr": "CCS (Combo)",
+                "de": "CCS (Combo)",
+                "es": "CCS (Combo)"
+              }
+            },
+            {
+              "value": "chademo",
+              "label": {
+                "en": "CHAdeMO",
+                "fr": "CHAdeMO",
+                "de": "CHAdeMO",
+                "es": "CHAdeMO"
+              }
+            },
+            {
+              "value": "type1",
+              "label": {
+                "en": "Type 1 (J1772)",
+                "fr": "Type 1 (J1772)",
+                "de": "Typ 1 (J1772)",
+                "es": "Tipo 1 (J1772)"
+              }
+            },
+            {
+              "value": "tesla",
+              "label": {
+                "en": "Tesla / NACS",
+                "fr": "Tesla / NACS",
+                "de": "Tesla / NACS",
+                "es": "Tesla / NACS"
+              }
+            },
+            {
+              "value": "domestic",
+              "label": {
+                "en": "Domestic socket",
+                "fr": "Prise domestique",
+                "de": "Haushaltssteckdose",
+                "es": "Enchufe doméstico"
+              }
+            }
+          ],
+          "required": false
+        },
+        {
+          "key": "min_power",
+          "type": "number",
+          "label": {
+            "en": "Minimum power (kW)",
+            "fr": "Puissance minimale (kW)",
+            "de": "Mindestleistung (kW)",
+            "es": "Potencia mínima (kW)"
+          },
+          "description": {
+            "en": "Leave empty for any.",
+            "fr": "Laisser vide pour toutes.",
+            "de": "Leer lassen für alle.",
+            "es": "Dejar vacío para cualquiera."
+          },
+          "min": 0,
+          "max": 1000,
+          "required": false
+        },
+        {
+          "key": "in_service_only",
+          "type": "boolean",
+          "label": {
+            "en": "In service only",
+            "fr": "En service seulement",
+            "de": "Nur in Betrieb",
+            "es": "Solo en servicio"
+          },
+          "default": true,
+          "required": false
+        }
+      ],
+      "outputs": [
+        {
+          "key": "found",
+          "type": "boolean",
+          "label": {
+            "en": "Found",
+            "fr": "Trouvée",
+            "de": "Gefunden",
+            "es": "Encontrado"
+          }
+        },
+        {
+          "key": "count",
+          "type": "number",
+          "label": {
+            "en": "Matching stations",
+            "fr": "Bornes correspondantes",
+            "de": "Passende Stationen",
+            "es": "Puntos que coinciden"
+          }
+        },
+        {
+          "key": "station_id",
+          "type": "number",
+          "label": {
+            "en": "Open Charge Map id",
+            "fr": "Identifiant Open Charge Map",
+            "de": "Open-Charge-Map-ID",
+            "es": "Id de Open Charge Map"
+          }
+        },
+        {
+          "key": "name",
+          "type": "string",
+          "label": {
+            "en": "Station",
+            "fr": "Borne",
+            "de": "Ladestation",
+            "es": "Punto de recarga"
+          }
+        },
+        {
+          "key": "address",
+          "type": "string",
+          "label": {
+            "en": "Address",
+            "fr": "Adresse",
+            "de": "Adresse",
+            "es": "Dirección"
+          }
+        },
+        {
+          "key": "distance_km",
+          "type": "number",
+          "label": {
+            "en": "Distance (km)",
+            "fr": "Distance (km)",
+            "de": "Entfernung (km)",
+            "es": "Distancia (km)"
+          }
+        },
+        {
+          "key": "max_power_kw",
+          "type": "number",
+          "label": {
+            "en": "Max power (kW)",
+            "fr": "Puissance max (kW)",
+            "de": "Max. Leistung (kW)",
+            "es": "Potencia máx. (kW)"
+          }
+        },
+        {
+          "key": "connectors",
+          "type": "string",
+          "label": {
+            "en": "Connectors",
+            "fr": "Prises",
+            "de": "Stecker",
+            "es": "Conectores"
+          }
+        },
+        {
+          "key": "operator",
+          "type": "string",
+          "label": {
+            "en": "Operator",
+            "fr": "Opérateur",
+            "de": "Betreiber",
+            "es": "Operador"
+          }
+        },
+        {
+          "key": "status",
+          "type": "string",
+          "label": {
+            "en": "Status",
+            "fr": "État",
+            "de": "Status",
+            "es": "Estado"
+          },
+          "description": {
+            "en": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed or unknown.",
+            "fr": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed ou unknown.",
+            "de": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed oder unknown.",
+            "es": "available, in_use, temporarily_unavailable, operational, partly_operational, not_operational, planned, removed o unknown."
+          }
+        },
+        {
+          "key": "latitude",
+          "type": "number",
+          "label": {
+            "en": "Latitude",
+            "fr": "Latitude",
+            "de": "Breite",
+            "es": "Latitud"
+          }
+        },
+        {
+          "key": "longitude",
+          "type": "number",
+          "label": {
+            "en": "Longitude",
+            "fr": "Longitude",
+            "de": "Länge",
+            "es": "Longitud"
+          }
+        },
+        {
+          "key": "url",
+          "type": "string",
+          "label": {
+            "en": "Open Charge Map page",
+            "fr": "Page Open Charge Map",
+            "de": "Open-Charge-Map-Seite",
+            "es": "Página de Open Charge Map"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, fertig für eine Nachricht.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1204 @@
+[
+  {
+    "DateLastVerified": "2017-02-16T07:00:00Z",
+    "ID": 84030,
+    "UUID": "125ABDDF-1406-4375-AD2F-21603E4BEB95",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 84376,
+      "Title": "Rue de la Tour Jacob",
+      "AddressLine1": "Rue de la Tour Jacob 73",
+      "Town": "Luxemburg",
+      "StateOrProvince": "Kanton Luxemburg",
+      "Postcode": "2165",
+      "CountryID": 132,
+      "Latitude": 49.61223307128665,
+      "Longitude": 6.1420602948287595,
+      "ContactTelephone1": "+352 2737-6699",
+      "AccessComments": "24/7 usable with 4 parking spaces.",
+      "RelatedURL": "http://enovos.lu/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 119431,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 32,
+        "Voltage": 400,
+        "PowerKW": 22,
+        "CurrentTypeID": 20,
+        "Quantity": 4
+      }
+    ],
+    "NumberOfPoints": 4,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2017-02-16T07:00:00Z",
+    "DateCreated": "2017-02-16T07:00:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2015-08-12T20:37:00Z",
+    "ID": 51676,
+    "UUID": "7D3360D1-11AC-4686-9C3E-AC70BDDCFFFD",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 4,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 52022,
+      "Title": "Parking ROND POINT SCHUMAN",
+      "AddressLine1": "49 Allée Scheffer",
+      "Town": "Letzebuerg",
+      "Postcode": "L-2520",
+      "CountryID": 132,
+      "Latitude": 49.618,
+      "Longitude": 6.12517,
+      "ContactTelephone1": "+352 48 13 36 331",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 64133,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Voltage": 240,
+        "PowerKW": 11,
+        "CurrentTypeID": 10,
+        "Quantity": 2
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2015-08-12T20:37:00Z",
+    "DateCreated": "2015-08-12T10:16:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2025-12-19T15:35:00Z",
+    "ID": 471057,
+    "UUID": "D8D2610C-EC42-4F54-8A84-B5DEA725EC7D",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 471446,
+      "Title": "EHP",
+      "AddressLine1": "5 place Winston Churchill",
+      "AddressLine2": "Elvinger Hoss Prussen",
+      "Town": "Luxembourg",
+      "Postcode": "1340",
+      "CountryID": 132,
+      "Latitude": 49.61109100691624,
+      "Longitude": 6.119574908787854,
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 791186,
+        "ConnectionTypeID": 33,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "PowerKW": 22,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2025-12-19T15:35:00Z",
+    "DateCreated": "2025-12-16T15:30:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2018-10-03T15:58:00Z",
+    "ID": 91208,
+    "UUID": "DDEFD1D1-F08A-48AF-9259-3A042B492BEA",
+    "DataProviderID": 1,
+    "OperatorID": 23,
+    "OperatorsReference": "32499",
+    "UsageTypeID": 6,
+    "AddressInfo": {
+      "ID": 91554,
+      "Title": "Park Inn By Radisson Luxembourg City",
+      "AddressLine1": "45-47 Avenue de la Gare",
+      "Town": "Luxembourg",
+      "Postcode": "1611",
+      "CountryID": 132,
+      "Latitude": 49.602352,
+      "Longitude": 6.133357,
+      "ContactTelephone1": "+35 22 68 91 81",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 129339,
+        "ConnectionTypeID": 30,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 32,
+        "Voltage": 230,
+        "PowerKW": 14,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 1,
+    "GeneralComments": "1 Tesla Connector, up to 14kW.Available for patrons only. Self park.",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2018-10-03T15:58:00Z",
+    "DateCreated": "2017-08-02T05:33:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2022-08-19T16:53:00Z",
+    "ID": 195372,
+    "UUID": "0501F01E-09EC-44DE-901F-6E4DC55D56A3",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 4,
+    "UsageCost": "0.34 kWh + parking fee",
+    "AddressInfo": {
+      "ID": 195731,
+      "Title": "43 Rue du Fort Neipperg",
+      "AddressLine1": "43 Rue du Fort Neipperg",
+      "Town": "Luxembourg",
+      "StateOrProvince": "",
+      "Postcode": "2230",
+      "CountryID": 132,
+      "Latitude": 49.60219352618415,
+      "Longitude": 6.135005793619939,
+      "AccessComments": "inside parking Fort Neipperg ",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 325318,
+        "ConnectionTypeID": 25,
+        "Reference": "www.chargy.lu",
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "PowerKW": 22,
+        "CurrentTypeID": 20,
+        "Quantity": 20
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2022-08-19T16:53:00Z",
+    "DateCreated": "2022-08-19T06:40:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2016-06-04T02:38:00Z",
+    "ID": 32020,
+    "UUID": "8B22ED4E-1F2A-4528-84FA-96406C74521B",
+    "DataProviderID": 26,
+    "DataProvidersReference": "29081",
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011001-01-00001",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32366,
+      "Title": "Avenue John F. Kennedy",
+      "AddressLine1": "Avenue John F. Kennedy",
+      "Town": "Luxembourg",
+      "Postcode": "1499",
+      "CountryID": 132,
+      "Latitude": 49.619168,
+      "Longitude": 6.141948,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35531,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46142,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46143,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46144,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-06-04T02:38:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2017-10-18T08:30:00Z",
+    "ID": 94120,
+    "UUID": "AB715353-A05C-46ED-94D1-29C7593332D2",
+    "DataProviderID": 1,
+    "OperatorID": 45,
+    "UsageTypeID": 6,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 94466,
+      "Title": "Banque Européenne d‘Investissement",
+      "AddressLine1": "98 bd Konrad Adenauer",
+      "Town": "Luxembourg",
+      "Postcode": "2950",
+      "CountryID": 132,
+      "Latitude": 49.6209422738297,
+      "Longitude": 6.13897562026978,
+      "AccessComments": "EIB Visitor Parking East",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 133210,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Quantity": 2
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2017-10-18T08:30:00Z",
+    "DateCreated": "2017-10-16T16:17:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2012-01-17T10:09:00Z",
+    "ID": 9109,
+    "UUID": "69A8FC38-7903-4C61-AB25-38071B2DBDF1",
+    "DataProviderID": 1,
+    "OperatorID": 1,
+    "UsageTypeID": 3,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 9006,
+      "Title": "Smart Center Luxembourg",
+      "AddressLine1": "45 rue de Bouillon",
+      "AddressLine2": "",
+      "Town": "Luxembourg",
+      "StateOrProvince": "",
+      "Postcode": "1248",
+      "CountryID": 132,
+      "Latitude": 49.5990854,
+      "Longitude": 6.11152519999996,
+      "ContactTelephone1": "+352 490966 -1",
+      "ContactTelephone2": "",
+      "ContactEmail": "info@smartcenter.lu",
+      "AccessComments": "",
+      "RelatedURL": "http://www.smartcenter.lu",
+      "DistanceUnit": 0
+    },
+    "Connections": [],
+    "NumberOfPoints": 1,
+    "GeneralComments": "",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2012-01-17T10:09:00Z",
+    "DateCreated": "2012-01-15T21:15:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2017-04-09T18:00:00Z",
+    "ID": 85513,
+    "UUID": "3E05C9E8-010C-4E85-89F5-7B4907768C73",
+    "DataProviderID": 1,
+    "OperatorID": 205,
+    "UsageTypeID": 1,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 85859,
+      "Title": "Conservatoire de Musique",
+      "AddressLine1": "33, rue Charles Martel",
+      "Town": "Luxembourg",
+      "Postcode": "2134",
+      "CountryID": 132,
+      "Latitude": 49.604361,
+      "Longitude": 6.1051647,
+      "AccessComments": "Underground parking, level -4, on the right side",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 121604,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 0,
+        "LevelID": 2
+      },
+      {
+        "ID": 121605,
+        "ConnectionTypeID": 13,
+        "StatusTypeID": 0,
+        "LevelID": 1,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 4,
+    "GeneralComments": "Operated by Ville de Luxembourg, installeé by Estonteco",
+    "StatusTypeID": 0,
+    "DateLastStatusUpdate": "2017-04-09T18:00:00Z",
+    "DateCreated": "2017-04-06T04:00:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2017-05-11T08:35:00Z",
+    "ID": 87463,
+    "UUID": "76319170-C74A-477A-8BBE-C81B10D5E439",
+    "DataProviderID": 1,
+    "OperatorID": 1,
+    "UsageTypeID": 1,
+    "UsageCost": "Free. Parking fees apply",
+    "AddressInfo": {
+      "ID": 87809,
+      "Title": "Centre Hospitalier Parking P3",
+      "AddressLine1": "4, rue Nicolas-Ernest Barblé",
+      "Town": "Luxembourg",
+      "Postcode": "1210",
+      "CountryID": 132,
+      "Latitude": 49.6190829567843,
+      "Longitude": 6.10327005386352,
+      "AccessComments": "Parking P3, left of the entrance",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 123988,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 0,
+        "LevelID": 2
+      },
+      {
+        "ID": 123989,
+        "ConnectionTypeID": 18,
+        "StatusTypeID": 0,
+        "LevelID": 2
+      },
+      {
+        "ID": 123990,
+        "ConnectionTypeID": 13,
+        "StatusTypeID": 0,
+        "LevelID": 2,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "GeneralComments": "Parking fees while charging apply",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2017-05-11T08:35:00Z",
+    "DateCreated": "2017-05-09T06:30:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2022-08-12T13:33:00Z",
+    "ID": 194234,
+    "UUID": "6B0508F1-09D3-4B66-809F-D2503EDC5679",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 1,
+    "UsageCost": "0.47€/kWh",
+    "AddressInfo": {
+      "ID": 194593,
+      "Title": "Rue Richard Coudenhove-Kalergi",
+      "AddressLine1": "Rue Richard Coudenhove-Kalergi",
+      "Town": "Luxembourg",
+      "Postcode": "1359",
+      "CountryID": 132,
+      "Latitude": 49.62666232876782,
+      "Longitude": 6.160362494963238,
+      "AccessComments": "Parking Uni",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 316396,
+        "ConnectionTypeID": 33,
+        "Reference": "Superchargy Uni Kirchberg",
+        "StatusTypeID": 50,
+        "LevelID": 3,
+        "PowerKW": 350,
+        "CurrentTypeID": 30,
+        "Quantity": 1
+      },
+      {
+        "ID": 316397,
+        "ConnectionTypeID": 33,
+        "StatusTypeID": 50,
+        "LevelID": 3,
+        "PowerKW": 160,
+        "CurrentTypeID": 30,
+        "Quantity": 3,
+        "Comments": "CCS"
+      }
+    ],
+    "NumberOfPoints": 4,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2022-08-12T13:33:00Z",
+    "DateCreated": "2022-07-20T11:41:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2015-05-24T20:46:00Z",
+    "ID": 32019,
+    "UUID": "D1243227-8EB7-4DA0-90A9-7C5AE4338FD5",
+    "DataProviderID": 1,
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00000010-01-00001",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32365,
+      "Title": "Rue Thomas Edison 2",
+      "AddressLine1": "Rue Thomas Edison 2",
+      "Town": "Strassen",
+      "Postcode": "1442",
+      "CountryID": 132,
+      "Latitude": 49.62172,
+      "Longitude": 6.09577,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35530,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11
+      },
+      {
+        "ID": 46141,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2015-05-24T20:46:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2021-12-27T12:07:00Z",
+    "ID": 53619,
+    "UUID": "EC322EB0-3DD8-4A05-B4FF-C1CE5197CFD9",
+    "DataProviderID": 1,
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011004-01-00009",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 53965,
+      "Title": "chatel france",
+      "AddressLine1": "",
+      "Town": "Hesperange",
+      "Postcode": "2112",
+      "CountryID": 132,
+      "Latitude": 49.58451,
+      "Longitude": 6.142168,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 66795,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2021-12-27T12:07:00Z",
+    "DateCreated": "2015-09-20T11:50:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2014-06-05T12:06:00Z",
+    "ID": 15293,
+    "UUID": "439F1C54-799A-4B65-AE59-F366DC21F9CD",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 6,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 15639,
+      "Title": "Renault RRG Luxembourg",
+      "AddressLine1": "2, rue Robert Stumper",
+      "Town": " Luxembourg",
+      "Postcode": "2557",
+      "CountryID": 132,
+      "Latitude": 49.5849644,
+      "Longitude": 6.11861810000005,
+      "ContactTelephone1": "+352 40 30 40 1",
+      "AccessComments": "du lundi au vendredi de 7h30 à 18h30 et le samedi de 8h00 à 17h00. ",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 13609,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 32,
+        "Voltage": 220,
+        "PowerKW": 22,
+        "CurrentTypeID": 20,
+        "Quantity": 4
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2014-06-05T12:06:00Z",
+    "DateCreated": "2013-01-01T20:41:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2025-06-07T12:49:00Z",
+    "ID": 313299,
+    "UUID": "965C751B-CBBD-47E0-9EB0-9039F9682ACA",
+    "DataProviderID": 1,
+    "OperatorID": 3534,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 313688,
+      "Title": "Tesla Supercharger Luxembourg Urban (Floor -3)",
+      "AddressLine1": "25 Bd Friedrich Wilhelm Raiffeisen",
+      "StateOrProvince": "",
+      "CountryID": 132,
+      "Latitude": 49.582426,
+      "Longitude": 6.126824,
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 603414,
+        "ConnectionTypeID": 33,
+        "StatusTypeID": 50,
+        "LevelID": 3,
+        "PowerKW": 250,
+        "CurrentTypeID": 30,
+        "Quantity": 16
+      }
+    ],
+    "NumberOfPoints": 16,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2025-06-07T12:49:00Z",
+    "DateCreated": "2025-06-04T12:47:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2014-03-23T12:50:00Z",
+    "ID": 22950,
+    "UUID": "115F64BC-D57D-44AF-9096-B9BC9A915155",
+    "DataProviderID": 1,
+    "OperatorID": 1,
+    "UsageTypeID": 0,
+    "AddressInfo": {
+      "ID": 23295,
+      "Title": "PWC",
+      "AddressLine1": "Route d'Esch 400",
+      "AddressLine2": "Gasperich",
+      "Town": "Luxemburg",
+      "StateOrProvince": "Luxembourg",
+      "Postcode": "L-2530",
+      "CountryID": 132,
+      "Latitude": 49.5827074772722,
+      "Longitude": 6.11450364760743,
+      "ContactTelephone1": " [352] 49 48 48 1",
+      "RelatedURL": "http://www.pwc.com/gx/en/office-locations/luxembourg.jhtml",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 24635,
+        "ConnectionTypeID": 2,
+        "LevelID": 3,
+        "CurrentTypeID": 30,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2014-03-23T12:50:00Z",
+    "DateCreated": "2014-03-23T12:49:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2013-01-01T20:16:00Z",
+    "ID": 15292,
+    "UUID": "47DBA435-8AD2-4AB1-A491-7C9226B7EA72",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 0,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 15638,
+      "Title": "P&T Luxembourg",
+      "AddressLine1": "1, rue Emile Bian",
+      "AddressLine2": "",
+      "Town": "Luxembourg ",
+      "StateOrProvince": "",
+      "Postcode": "2999",
+      "CountryID": 132,
+      "Latitude": 49.5806638,
+      "Longitude": 6.115040700000009,
+      "ContactTelephone1": "",
+      "ContactTelephone2": "",
+      "ContactEmail": "",
+      "AccessComments": "Carport photovoltaïque",
+      "RelatedURL": "http://www.pt.lu/portal/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 13608,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 0,
+        "Amps": 32,
+        "Quantity": 4
+      }
+    ],
+    "NumberOfPoints": 2,
+    "GeneralComments": "",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2013-01-01T20:16:00Z",
+    "DateCreated": "2013-01-01T20:16:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2019-06-04T06:58:00Z",
+    "ID": 127493,
+    "UUID": "B3CC7759-E5E6-4D32-A731-8FCE785D6847",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 1,
+    "AddressInfo": {
+      "ID": 127839,
+      "Title": "Rue Docteur Nicolas Clasen",
+      "AddressLine1": "Rue Docteur Nicolas Clasen",
+      "AddressLine2": "Neudorf-Weimershof",
+      "Town": "Luxembourg",
+      "StateOrProvince": "Canton Luxembourg",
+      "Postcode": "2540",
+      "CountryID": 132,
+      "Latitude": 49.6318136108015,
+      "Longitude": 6.17498990998592,
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 178466,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "CurrentTypeID": 20,
+        "Quantity": 4
+      }
+    ],
+    "NumberOfPoints": 4,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2019-06-04T06:58:00Z",
+    "DateCreated": "2019-06-03T12:26:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2016-06-04T02:38:00Z",
+    "ID": 53620,
+    "UUID": "D568A535-89A8-4A58-87AC-D9DF74BDA89E",
+    "DataProviderID": 26,
+    "DataProvidersReference": "67706",
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011004-01-00007",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 53966,
+      "Title": "Rue de l'École 2",
+      "AddressLine1": "Rue de l'École 2",
+      "Town": "Itzig",
+      "Postcode": "5957",
+      "CountryID": 132,
+      "Latitude": 49.587155,
+      "Longitude": 6.170041,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 66796,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-06-04T02:38:00Z",
+    "DateCreated": "2015-09-20T11:50:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2017-03-30T12:46:00Z",
+    "ID": 85205,
+    "UUID": "79602D6C-618A-4296-AFDB-DB2026F19CFC",
+    "DataProviderID": 1,
+    "OperatorID": 45,
+    "UsageTypeID": 2,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 85551,
+      "Title": "BGL BNP Paribas",
+      "AddressLine1": "10, rue Edward Steichen",
+      "Town": "Luxembourg",
+      "Postcode": "2540",
+      "CountryID": 132,
+      "Latitude": 49.6325761645003,
+      "Longitude": 6.17497622966766,
+      "AccessComments": "Entrance Agence Kirchberg",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 121042,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      },
+      {
+        "ID": 121043,
+        "ConnectionTypeID": 26,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 2,
+    "GeneralComments": "Access only for customers of the bank branch",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2017-03-30T12:46:00Z",
+    "DateCreated": "2017-03-29T06:15:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2016-06-04T02:38:00Z",
+    "ID": 32023,
+    "UUID": "441E4658-8640-42BE-AB1A-A8CE0CCC9019",
+    "DataProviderID": 26,
+    "DataProvidersReference": "51724",
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011001-01-00005",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32369,
+      "Title": "Rue de Neudorf",
+      "AddressLine1": "Rue de Neudorf",
+      "Town": "Luxembourg",
+      "Postcode": "1747",
+      "CountryID": 132,
+      "Latitude": 49.622735,
+      "Longitude": 6.183594,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35534,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46147,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-06-04T02:38:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2016-06-04T02:38:00Z",
+    "ID": 32021,
+    "UUID": "256B25A7-27A0-45C6-80DD-208726826BE6",
+    "DataProviderID": 26,
+    "DataProvidersReference": "51727",
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011001-01-00006",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32367,
+      "Title": "Rue de Neudorf",
+      "AddressLine1": "Rue de Neudorf",
+      "Town": "Scheidhof",
+      "Postcode": "2517",
+      "CountryID": 132,
+      "Latitude": 49.621391,
+      "Longitude": 6.189275,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35532,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46145,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 95315,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 95316,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-06-04T02:38:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2013-01-01T20:03:00Z",
+    "ID": 15290,
+    "UUID": "18F47589-71B4-4AC1-8EAF-5FA1A2BE5D79",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 0,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 15636,
+      "Title": "Arval Luxembourg",
+      "AddressLine1": "36, route de Longwy",
+      "AddressLine2": "",
+      "Town": "Bertrange",
+      "StateOrProvince": "",
+      "Postcode": "8080",
+      "CountryID": 132,
+      "Latitude": 49.60286139999999,
+      "Longitude": 6.0719662999999855,
+      "ContactTelephone1": "+352 44 91 80 1",
+      "ContactTelephone2": "",
+      "ContactEmail": "info.lu@arval.lu",
+      "AccessComments": "",
+      "RelatedURL": "http://www.arval.lu/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 13606,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 0,
+        "Amps": 32,
+        "Quantity": 2
+      }
+    ],
+    "NumberOfPoints": 1,
+    "GeneralComments": "",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2013-01-01T20:03:00Z",
+    "DateCreated": "2013-01-01T20:03:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2018-10-06T05:05:00Z",
+    "ID": 108235,
+    "UUID": "0D392453-CF6A-4800-8987-626CDD22B736",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 108581,
+      "Title": "Pall Center - Chargy",
+      "AddressLine1": "237 Route d'Arlon",
+      "Town": "Strassen",
+      "Postcode": "8010",
+      "CountryID": 132,
+      "Latitude": 49.6202915879352,
+      "Longitude": 6.06888155085289,
+      "ContactTelephone1": "+352 80062020",
+      "AccessComments": "Behind Pall Center, on the left.",
+      "RelatedURL": "https://www.chargy.lu",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 152958,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 32,
+        "Voltage": 400,
+        "PowerKW": 22,
+        "CurrentTypeID": 20,
+        "Quantity": 2
+      }
+    ],
+    "NumberOfPoints": 2,
+    "GeneralComments": "Chargy network. Requires compatible ID badge. 2 EV parking spots and 2 plugs available.",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2018-10-06T05:05:00Z",
+    "DateCreated": "2018-09-15T13:45:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2016-06-04T02:38:00Z",
+    "ID": 32011,
+    "UUID": "E82C5CC1-3B47-492A-AE1B-058337BC24A8",
+    "DataProviderID": 26,
+    "DataProvidersReference": "33091",
+    "OperatorID": 78,
+    "OperatorsReference": "Essent EM-LU-00011004-01-00001",
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32357,
+      "Title": "Route de Thionville",
+      "AddressLine1": "Route de Thionville",
+      "Town": "Hesperange",
+      "Postcode": "5887",
+      "CountryID": 132,
+      "Latitude": 49.573372,
+      "Longitude": 6.158466,
+      "RelatedURL": "http://www.essent.nl",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35522,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      },
+      {
+        "ID": 46137,
+        "ConnectionTypeID": 25,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 10
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-06-04T02:38:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  },
+  {
+    "DateLastVerified": "2016-02-04T00:25:00Z",
+    "ID": 60573,
+    "UUID": "2950E142-638C-482F-9D55-A0FBBA1DFFD5",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 60919,
+      "Title": "Administration Communale",
+      "AddressLine1": "Route de Diekirch 1",
+      "Town": "Walferdange",
+      "StateOrProvince": "Kanton Luxemburg",
+      "Postcode": "7220",
+      "CountryID": 132,
+      "Latitude": 49.6593126,
+      "Longitude": 6.13045250000005,
+      "AccessComments": "Charger gratuitement de lundi a vendredi. Max. deux heures. Parking de centre culturelle.",
+      "RelatedURL": "http://www.enovos.lu/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 76757,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 2
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2016-02-04T00:25:00Z",
+    "DateCreated": "2016-02-02T11:35:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2021-05-30T11:26:00Z",
+    "ID": 175568,
+    "UUID": "000EE3AC-2E3E-4478-B4F1-67C59B158DF7",
+    "DataProviderID": 1,
+    "OperatorID": 3321,
+    "UsageTypeID": 4,
+    "AddressInfo": {
+      "ID": 175927,
+      "Title": "2, Rue Nicholas Wester",
+      "AddressLine1": "",
+      "Town": "Alzingen",
+      "Postcode": "5836",
+      "CountryID": 132,
+      "Latitude": 49.565015575516526,
+      "Longitude": 6.161676927812664,
+      "RelatedURL": "http://www.chargy.lu",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 272565,
+        "ConnectionTypeID": 25,
+        "Reference": "https://chargy.lu/fr/",
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "PowerKW": 22,
+        "CurrentTypeID": 20,
+        "Quantity": 0
+      }
+    ],
+    "NumberOfPoints": 2,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2021-05-30T11:26:00Z",
+    "DateCreated": "2021-05-29T20:06:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2025-07-11T06:19:00Z",
+    "ID": 15294,
+    "UUID": "6A6F2A7A-D43D-4AAA-883A-BE208AF3665E",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "UsageTypeID": 6,
+    "UsageCost": "Free",
+    "AddressInfo": {
+      "ID": 15640,
+      "Title": "Foyer Assurances",
+      "AddressLine1": "12 rue Léon Laval",
+      "AddressLine2": "",
+      "Town": "Leudelange",
+      "StateOrProvince": "",
+      "Postcode": "3372",
+      "CountryID": 132,
+      "Latitude": 49.56822730536564,
+      "Longitude": 6.082417146276043,
+      "ContactTelephone1": "437 437",
+      "ContactTelephone2": "",
+      "ContactEmail": "",
+      "AccessComments": "Du Lundi au Vendredi : de 08h30 à 17h30",
+      "RelatedURL": "http://www.foyer.lu",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 13610,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 0,
+        "Amps": 32,
+        "Quantity": 4
+      }
+    ],
+    "NumberOfPoints": 2,
+    "GeneralComments": "",
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2025-07-11T06:19:00Z",
+    "DateCreated": "2013-01-01T20:47:00Z",
+    "SubmissionStatusTypeID": 200
+  },
+  {
+    "DateLastVerified": "2019-09-03T10:13:00Z",
+    "ID": 32022,
+    "UUID": "1C63A22E-9B72-4F43-ABB2-0A98418557A9",
+    "DataProviderID": 1,
+    "OperatorID": 52,
+    "OperatorsReference": "Essent EM-LU-00000011-01-00001",
+    "UsageTypeID": 4,
+    "UsageCost": "0.00 jaarabonnement",
+    "AddressInfo": {
+      "ID": 32368,
+      "Title": "shopping center La Belle Etoile ",
+      "AddressLine1": "Route d'Arlon",
+      "Town": "Bertrange",
+      "Postcode": "8088",
+      "CountryID": 132,
+      "Latitude": 49.622444,
+      "Longitude": 6.04822,
+      "AccessComments": "The charging station is located in the parking of the shopping center La Belle Etoile (new wing of the building, level -1).",
+      "RelatedURL": "http://www.belle-etoile.lu/",
+      "DistanceUnit": 0
+    },
+    "Connections": [
+      {
+        "ID": 35533,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      },
+      {
+        "ID": 46146,
+        "ConnectionTypeID": 25,
+        "StatusTypeID": 50,
+        "LevelID": 2,
+        "Amps": 16,
+        "Voltage": 400,
+        "PowerKW": 11,
+        "CurrentTypeID": 20,
+        "Quantity": 1
+      }
+    ],
+    "NumberOfPoints": 1,
+    "StatusTypeID": 50,
+    "DateLastStatusUpdate": "2019-09-03T10:13:00Z",
+    "DateCreated": "2015-01-09T06:03:00Z",
+    "SubmissionStatusTypeID": 100
+  }
+]

@@ -1,0 +1,20 @@
+Gladys Open Charge Map integration
+Copyright 2026 William Deren
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Open Charge Map is a non-profit, community project. This community
+integration is not affiliated with, endorsed or sponsored by Open Charge Map.
+It reads the Open Charge Map API (api.openchargemap.io) with the API key of
+each user, under the terms of https://openchargemap.org/about/terms.
+
+Charging station data: Open Charge Map Contributors, licensed under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0), and the
+data providers named on each station, under their own licences. The
+integration shows the data provider and its licence with every station, as
+the terms of Open Charge Map ask.
+
+The test fixtures (test/fixtures/ocm-*.json) are stations around Luxembourg
+City taken from the public export of Open Charge Map
+(https://github.com/openchargemap/ocm-export), Open Charge Map Contributors,
+CC BY 4.0.
